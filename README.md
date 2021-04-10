@@ -10,10 +10,22 @@ To use this package, ROS needs to be installed on your Raspberry-pi.
 For more detail about ROS, please refer to the [ROS documentations](http://wiki.ros.org/).
 This project was built with ROS Noetic release.
 
+## Prerequisite
 For communicating over I2C and GPIO, install the Wiring Pi library:
 ```bash
 sudo apt-get install wiringpi
 ```
+
+The following ROS packages are likely not installed by default and needs to be installed:
+```
+compressed_image_transport
+camera_info_manager
+dynamic_reconfigure
+diagnostic_updater
+async_web_server_cpp
+```
+There are many ways to install ROS packages. You can search for pre-compiled binaries for you system or you can build them from source.
+[See this post](https://industrial-training-master.readthedocs.io/en/melodic/_source/session1/Installing-Existing-Packages.html) for more details.
 
 ## Installation and Usage
 ```bash
