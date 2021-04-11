@@ -1,5 +1,5 @@
 <launch>
-    <arg name="ads7830_publish_rate" default="5"/>
+    <arg name="ads7830_publish_rate" default="0.2"/>
 
     <!-- all vars that included.launch requires must be set -->
     <node type="monitor_battery" pkg="ads7830" name="monitor_battery" output="screen">
