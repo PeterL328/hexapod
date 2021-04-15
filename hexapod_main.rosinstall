@@ -2,9 +2,9 @@
 - git: {local-name: hexapod, uri: 'git@github.com:PeterL328/hexapod.git', version: master}
 
 # Sensor repos
-- git: {local-name: raspicam_node, uri: 'git@github.com:UbiquityRobotics/raspicam_node.git', version: kinetic}
-- git: {local-name: ads7830, uri: 'git@github.com:PeterL328/ads7830.git', version: master}
-- git: {local-name: mpu5060, uri: 'git@github.com:PeterL328/mpu5060.git', version: master}
+- git: {local-name: hexapod_camera, uri: 'git@github.com:UbiquityRobotics/raspicam_node.git', version: kinetic}
+- git: {local-name: hexapod_ads7830, uri: 'git@github.com:PeterL328/hexapod_ads7830.git', version: master}
+- git: {local-name: hexapod_mpu5060, uri: 'git@github.com:PeterL328/hexapod_mpu5060.git', version: master}
 
 # Web server repos
-- git: {local-name: web_video_server, uri: 'git@github.com:RobotWebTools/web_video_server.git', version: master}
+- git: {local-name: hexapod_web_server, uri: 'git@github.com:RobotWebTools/web_video_server.git', version: master}
