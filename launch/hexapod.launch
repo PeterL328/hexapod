@@ -3,10 +3,10 @@
     <arg name="mpu5060_publish_rate" default="10"/>
 
     <!-- all vars that included.launch requires must be set -->
-    <node type="monitor_battery" pkg="ads7830" name="monitor_battery" output="screen">
+    <node type="monitor_battery" pkg="hexapod_driver" name="monitor_battery" output="screen">
         <param name="publish_rate" value="$(arg ads7830_publish_rate)"/>
     </node>
-    <node type="imu_readings" pkg="mpu5060" name="imu_readings" output="screen">
+    <node type="imu_readings" pkg="hexapod_driver" name="imu_readings" output="screen">
         <param name="publish_rate" value="$(arg mpu5060_publish_rate)"/>
     </node>
     <include file="$(find raspicam_node)/launch/camerav2_410x308_30fps.launch">
