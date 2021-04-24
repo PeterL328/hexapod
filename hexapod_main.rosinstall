@@ -1,7 +1,10 @@
-# Main launch repo
+# Main launch repos
 - git: {local-name: hexapod, uri: 'git@github.com:PeterL328/hexapod.git', version: master}
 
-# Messages Repos
+# Kinematics repos
+- git: {local-name: hexapod_kinematics, uri: 'git@github.com:PeterL328/hexapod_kinematics.git', version: master}
+
+# Messages repos
 - git: {local-name: hexapod_msgs, uri: 'git@github.com:PeterL328/hexapod_msgs.git', version: master}
 
 # Sensor repos
