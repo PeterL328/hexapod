@@ -10,6 +10,7 @@
         <param name="publish_rate" value="$(arg mpu5060_publish_rate)"/>
     </node>
     <node type="joint_controller" pkg="hexapod_driver" name="joint_controller" output="screen">
+        <remap from="/joint_controller/joints_state" to="/joints_state"/>
     </node>
     <include file="$(find raspicam_node)/launch/camerav2_410x308_30fps.launch">
     </include>
