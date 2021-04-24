@@ -1,6 +1,9 @@
 # Main launch repo
 - git: {local-name: hexapod, uri: 'git@github.com:PeterL328/hexapod.git', version: master}
 
+# Messages Repos
+- git: {local-name: hexapod_msgs, uri: 'git@github.com:PeterL328/hexapod_msgs.git', version: master}
+
 # Sensor repos
 - git: {local-name: hexapod_camera, uri: 'git@github.com:UbiquityRobotics/raspicam_node.git', version: kinetic}
 - git: {local-name: hexapod_driver, uri: 'git@github.com:PeterL328/hexapod_driver.git', version: master}
