@@ -6,7 +6,7 @@ to start the hexapod robot.
 At the moment, the package is meant for the [Freenove Big Hexapod kit](https://github.com/Freenove/Freenove_Big_Hexapod_Robot_Kit_for_Raspberry_Pi) and is meant for their custom Raspberry-pi shield.
 
 ## Getting Started
-To use this package, ROS needs to be installed on your Raspberry-pi.
+To use this package, ROS needs to be installed on your **Raspberry-pi**.
 For more detail about ROS, please refer to the [ROS documentations](http://wiki.ros.org/).
 This project was built with ROS Noetic release.
 
@@ -44,7 +44,18 @@ cd ~/my_workspace/
 wstool init src src/.rosinstall
 wstool update -t src
 
+# Build the catkin workspace
+cd ~/my_workspace/
+
+# If you are developing on your local machine and not the Raspberry Pi, then you will not
+# be able to build the hexapod_driver package because you can't install wiringpi.
+# You can build packages selectively using
+catkin_make --only-pkg-with-deps <target_package>
+# else you are building on the Raspberry Pi:
+catkin_make
+
 # Assuming all the dependencies are resolved
 # Double check in each of the packages
+# Assuming you built all the packages and are on the Raspberry Pi.
 roslaunch hexapod hexapod.launch
 ```
