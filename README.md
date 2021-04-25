@@ -29,16 +29,19 @@ There are many ways to install ROS packages. You can search for pre-compiled bin
 
 ## Installation and Usage
 ```bash
-# Create a catkin workspace
-mkdir ~/my_workspace
-cd ~/my_workspace
+# Create a catkin workspace 
+mkdir -p ~/my_workspace/src # (Can rename my_workspace)
+cd ~/my_workspace/
+catkin_make
 
 # clone this repo
+cd ~/my_workspace/src
 git clone https://github.com/PeterL328/hexapod.git
-cp hexapod/hexapod_main.rosinstall .
+cp hexapod/hexapod_main.rosinstall .rosinstall
 
 # Initialize the workspace from a rosinstall file
-wstool init src hexapod_main.rosinstall
+cd ~/my_workspace/
+wstool init src src/.rosinstall
 wstool update -t src
 
 # Assuming all the dependencies are resolved
