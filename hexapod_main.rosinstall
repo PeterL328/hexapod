@@ -4,6 +4,9 @@
 # Description repos
 - git: {local-name: hexapod_description, uri: 'git@github.com:PeterL328/hexapod_description.git', version: master}
 
+# Simulation repos
+- git: {local-name: hexapod_gazebo, uri: 'git@github.com:PeterL328/hexapod_gazebo.git', version: master}
+
 # Kinematics repos
 - git: {local-name: hexapod_kinematics, uri: 'git@github.com:PeterL328/hexapod_kinematics.git', version: master}
 
