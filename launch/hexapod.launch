@@ -2,6 +2,9 @@
     <arg name="ads7830_publish_rate" default="0.2"/>
     <arg name="mpu5060_publish_rate" default="10"/>
 
+    <!-- Load parameters -->
+    <rosparam command="load" file="$(find hexapod_description)/params/$(arg config).yaml" />
+
     <!-- all vars that included.launch requires must be set -->
     <node type="monitor_battery" pkg="hexapod_driver" name="monitor_battery" output="screen">
         <param name="publish_rate" value="$(arg ads7830_publish_rate)"/>

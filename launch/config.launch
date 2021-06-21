@@ -1,0 +1,4 @@
+<launch>
+    <!-- Load parameters -->
+    <rosparam command="load" file="$(find hexapod_description)/params/config.yaml" />
+</launch>
