@@ -11,9 +11,13 @@ For more detail about ROS, please refer to the [ROS documentations](http://wiki.
 This project was built with ROS Noetic release.
 
 ## Prerequisite
-For communicating over I2C and GPIO, install the Wiring Pi library:
 ```bash
+# I2C and GPIO
 sudo apt-get install wiringpi
+
+# Eigen3 library (Used in hexapod_control)
+# Should install to /usr/include/eigen3
+sudo apt install libeigen3-dev
 ```
 
 The following ROS packages are likely not installed by default and needs to be installed:
