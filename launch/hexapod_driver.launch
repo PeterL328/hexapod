@@ -1,0 +1,19 @@
+<launch>
+    <arg name="ads7830_publish_rate" default="0.2"/>
+    <arg name="mpu5060_publish_rate" default="10"/>
+
+    <!-- all vars that included.launch requires must be set -->
+    <node type="monitor_battery" pkg="hexapod_driver" name="monitor_battery" output="screen">
+        <param name="publish_rate" value="$(arg ads7830_publish_rate)"/>
+    </node>
+    <node type="imu_readings" pkg="hexapod_driver" name="imu_readings" output="screen">
+        <param name="publish_rate" value="$(arg mpu5060_publish_rate)"/>
+    </node>
+    <node type="joint_controller" pkg="hexapod_driver" name="joint_controller" output="screen">
+        <remap from="/joint_controller/joints_command" to="/joints_command"/>
+    </node>
+    <include file="$(find raspicam_node)/launch/camerav2_410x308_30fps.launch">
+    </include>
+    <node type="web_video_server" pkg="web_video_server" name="web_video_server" output="screen">
+    </node>
+</launch>

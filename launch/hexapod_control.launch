@@ -1,0 +1,11 @@
+<launch>
+    <arg name="control_refresh_rate" default="50"/>
+
+    <!-- Load parameters -->
+    <include file="$(find hexapod)/launch/config.launch" />
+
+    <!-- all vars that included.launch requires must be set -->
+    <node type="hexapod_control" pkg="hexapod_control" name="hexapod_control" output="screen">
+        <param name="publish_rate" value="$(arg control_refresh_rate)"/>
+    </node>
+</launch>
