@@ -1,6 +1,9 @@
 # Main launch repos
 - git: {local-name: hexapod, uri: 'git@github.com:PeterL328/hexapod.git', version: master}
 
+# Control panel repos
+- git: {local-name: hexapod_control_panel, uri: 'git@github.com:PeterL328/hexapod_control_panel.git', version: master}
+
 # Description repos
 - git: {local-name: hexapod_description, uri: 'git@github.com:PeterL328/hexapod_description.git', version: master}
 
