@@ -1,0 +1,15 @@
+<launch>
+    <arg name="interval_ms" default="0.02"/>
+    <arg name="control_refresh_rate" default="50"/>
+
+    <!-- all vars that included.launch requires must be set -->
+    <node type="joy_node" pkg="joy" name="joy_node" output="screen">
+        <remap from="/joy" to="/teleop_joystick/joy"/>
+        <param name="coalesce_interval" value="$(arg interval_ms)"/>
+    </node>
+    <node type="teleop_joystick" pkg="hexapod_control_panel" name="teleop_joystick" output="screen">
+        <remap from="/teleop_joystick/cmd_vel" to="/hexapod_control/cmd_vel"/>
+        <remap from="/teleop_joystick/state" to="/hexapod_control/state"/>
+        <remap from="/teleop_joystick/translate_rotate_command" to="/hexapod_control/translate_rotate_command"/>
+    </node>
+</launch>
