@@ -1,6 +1,7 @@
 <launch>
     <arg name="interval_ms" default="0.02"/>
     <arg name="control_refresh_rate" default="50"/>
+    <arg name="deadzone_val" default="0.0"/>
 
     <!-- all vars that included.launch requires must be set -->
     <node type="joy_node" pkg="joy" name="joy_node" output="screen">
@@ -11,5 +12,6 @@
         <remap from="/teleop_joystick/cmd_vel" to="/hexapod_control/cmd_vel"/>
         <remap from="/teleop_joystick/state" to="/hexapod_control/state"/>
         <remap from="/teleop_joystick/translate_rotate_command" to="/hexapod_control/translate_rotate_command"/>
+        <param name="deadzone" value="$(arg deadzone_val)"/>
     </node>
 </launch>
